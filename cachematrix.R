@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## this function takes a matrix and returns an intelligent object containing 4 
+## member functions capable of interacting with the data. This function is 
+## intended to work in tandem with cacheSolve.
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -17,7 +16,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Takes a makeCacheMatrix-generated matrix wrapper and conditionally calcuates the 
+## inverse or returning a cached version of the inverse matrix.
 cacheSolve <- function(x, ...) {
   m <- x$getinverse()
   if(!is.null(m)) {
